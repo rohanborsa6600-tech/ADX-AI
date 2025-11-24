@@ -65,7 +65,7 @@ if uploaded_file is not None:
                 # --- AI Logic ---
                 try:
                     genai.configure(api_key=api_key)
-                    model = genai.GenerativeModel('gemini-pro')
+                    model = genai.GenerativeModel('gemini-1.5-flash')
 
                     q_vec = vectorizer.transform([prompt])
                     distances, indices = nn.kneighbors(q_vec)
